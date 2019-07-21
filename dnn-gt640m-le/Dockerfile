@@ -3,12 +3,13 @@ FROM nvidia/cuda:8.0-cudnn6-devel
 #FROM nvidia/cuda:9.0-cudnn7-devel
 
 ARG PYTHON_VERSION=3.5
-ARG MINICONDA_SH=https://repo.anaconda.com/miniconda/Miniconda3-4.5.1-Linux-x86_64.sh
+ARG MINICONDA_SH=https://repo.anaconda.com/miniconda/Miniconda3-4.2.11-Linux-x86_64.sh
 
 #ARG PYTHON_VERSION=3.6
 #ARG MINICONDA_SH=https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
+         sudo \
          build-essential \
          cmake \
          git \
