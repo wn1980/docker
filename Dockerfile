@@ -1,6 +1,4 @@
 FROM nvidia/cuda:8.0-cudnn6-devel
-#FROM nvidia/cuda:8.0-cudnn7-devel
-#FROM nvidia/cuda:9.0-cudnn7-devel
 
 ARG PYTHON_VERSION=3.5
 ARG MINICONDA_SH=https://repo.anaconda.com/miniconda/Miniconda3-4.2.11-Linux-x86_64.sh
@@ -61,8 +59,8 @@ RUN apt -y autoremove
 #RUN mkdir -p /home/works && chmod 1777 /home/works
 
 # Configure user
-ARG user=ros
-ARG passwd=ros
+ARG user=jupyter
+ARG passwd=jupyter
 ARG uid=1000
 ARG gid=1000
 ENV USER=$user
